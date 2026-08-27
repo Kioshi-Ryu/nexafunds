@@ -49,7 +49,7 @@ The Drizzle schema contains `users`, `transactions`, `budgets`, and `categories`
 ## Local setup
 
 1. Install Node.js 20+ and pnpm.
-2. Copy `.env.example` to `.env` and set `DATABASE_URL` to a reachable MySQL/TiDB database. Keep `JWT_SECRET` long and private. The hosted WebDev environment injects its database and platform values automatically.
+2. Create a `.env` file in the project root and set `DATABASE_URL` to a reachable MySQL/TiDB database. Keep `JWT_SECRET` long and private. The hosted WebDev environment injects its database and platform values automatically.
 3. Install dependencies with `pnpm install`.
 4. Generate or apply the schema with `pnpm drizzle-kit generate` followed by the migration workflow used by your database environment. The checked-in migration is under `drizzle/0001_nappy_bloodscream.sql`.
 5. Start the combined client/server development process with `pnpm dev`. The command uses `cross-env`, so it works in Windows PowerShell, macOS, and Linux.
@@ -70,6 +70,15 @@ pnpm dev
 If account creation shows **“Failed to fetch”**, first confirm that the combined Vite and Express process is still running in the same terminal. Run `pnpm install` after pulling the latest code, add a valid local `.env` file, then run `pnpm dev`. Wait for the `Server running on http://localhost:...` message before opening the address in your browser. The project now uses `cross-env`, so the same `pnpm dev` command works in Windows PowerShell without setting `NODE_ENV` manually.
 
 If the terminal shows a database configuration error, confirm that `.env` contains a reachable MySQL/TiDB-compatible `DATABASE_URL` and a private `JWT_SECRET`. Restart `pnpm dev` after updating environment variables.
+
+Create this file as `C:\Users\laure\Downloads\ABDM\Compressed\nexofund\.env` (replace the database credentials with your own):
+
+```dotenv
+DATABASE_URL=mysql://YOUR_DATABASE_USER:YOUR_DATABASE_PASSWORD@127.0.0.1:3306/nexafund
+JWT_SECRET=replace-this-with-a-long-random-private-string
+```
+
+The database itself must exist and be reachable before registration can succeed. You can use a local MySQL installation, a local TiDB instance, or a hosted MySQL/TiDB-compatible provider. The optional analytics variables are no longer required for local development; the client only loads analytics when both are supplied.
 
 ## Project layout
 

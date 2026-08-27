@@ -57,3 +57,8 @@
 - [x] Document the project’s programming languages and technology stack in the README
 - [x] Synchronize the verified Budget Tracker project with the connected GitHub repository
 - [x] Diagnose the Windows local “Failed to fetch” registration error and document a startup fix
+- [x] Fix missing analytics environment handling for local development
+- [x] Clarify required local database configuration so registration can connect successfully
+- [x] Verify the local configuration guidance and updated startup behavior
+- [x] Replace unresolved analytics placeholders with guarded client-side initialization
+- [x] Document the exact local `.env` values needed when no environment template is present
