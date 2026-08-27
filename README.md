@@ -80,6 +80,26 @@ JWT_SECRET=replace-this-with-a-long-random-private-string
 
 The database itself must exist and be reachable before registration can succeed. You can use a local MySQL installation, a local TiDB instance, or a hosted MySQL/TiDB-compatible provider. The optional analytics variables are no longer required for local development; the client only loads analytics when both are supplied.
 
+### Recommended local MySQL account
+
+If MySQL reports `Access denied for user 'root'@'localhost'`, use MySQL Workbench to connect with the root password you set during MySQL installation, then run the following commands. Replace `CHANGE_THIS_PASSWORD` with a new password that you choose; do not include the angle brackets.
+
+```sql
+CREATE DATABASE IF NOT EXISTS nexafund;
+CREATE USER IF NOT EXISTS 'nexafund_app'@'localhost' IDENTIFIED BY 'CHANGE_THIS_PASSWORD';
+GRANT ALL PRIVILEGES ON nexafund.* TO 'nexafund_app'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+Then update `.env` with the matching application account credentials and restart the development server:
+
+```dotenv
+DATABASE_URL=mysql://nexafund_app:CHANGE_THIS_PASSWORD@127.0.0.1:3306/nexafund
+JWT_SECRET=replace-this-with-a-long-random-private-string
+```
+
+If the chosen database password includes `@`, `:`, `/`, `?`, or `#`, encode it in the connection URL before saving `.env`.
+
 ## Project layout
 
 ```text

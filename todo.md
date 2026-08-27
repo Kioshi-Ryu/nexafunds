@@ -62,3 +62,6 @@
 - [x] Verify the local configuration guidance and updated startup behavior
 - [x] Replace unresolved analytics placeholders with guarded client-side initialization
 - [x] Document the exact local `.env` values needed when no environment template is present
+- [ ] Resolve the MySQL access-denied configuration blocking local account registration
+- [ ] Document secure dedicated MySQL user setup for local development
+- [ ] Apply and verify the local Drizzle schema migrations that create the users and finance tables
