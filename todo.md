@@ -1,0 +1,57 @@
+# Project TODO
+
+- [x] Establish the personal finance dashboard design system and responsive app shell
+- [x] Add finance database tables and relations for users, transactions, budgets, and categories
+- [x] Add input validation, error handling, and user-scoped data access helpers
+- [x] Add protected REST endpoints under /api/auth, /api/transactions, /api/budgets, /api/categories, and /api/dashboard
+- [x] Add registration, login, logout, protected client-side routing, and account management
+- [x] Add transaction CRUD with income and expense types, categories, descriptions, and dates
+- [x] Add category CRUD scoped to the signed-in user
+- [x] Add monthly budget CRUD and budget-versus-spend tracking
+- [x] Add dashboard statistics for balance, income, expenses, budget, recent transactions, and chart-ready spending data
+- [x] Add interactive cash-flow and category-spending charts
+- [x] Add responsive mobile and desktop navigation and empty/loading/error states
+- [x] Add README, .env.example, and complete local setup instructions
+- [x] Add/update Vitest coverage for auth and finance data flows
+- [x] Run type checks, tests, build validation, and visual verification
+- [x] Add foreign keys/relations for user-scoped finance tables and align drizzle/relations.ts
+- [x] Refactor finance DB access into dedicated helpers in server/db.ts
+- [x] Implement protected client-side route boundaries with account profile editing and complete logout flow
+- [x] Add transaction edit UI and verify full frontend CRUD
+- [x] Add category update support and a connected category management UI
+- [x] Build budgets management UI with per-category budget-versus-spend views
+- [x] Add visible loading states for auth and dashboard fetches
+- [x] Expand Vitest coverage for transaction, category, budget, and dashboard flows
+
+## Final refinement audit
+
+- [x] Add real protected client-side routes/pages in App.tsx and gate dashboard sections behind auth-aware route boundaries
+- [x] Load the full transactions collection for the Transactions page and keep CRUD state synchronized
+- [x] Wire category edit UI to PUT /api/categories/:id
+- [x] Add budget edit UI plus per-category budget-versus-spend calculations and presentation
+- [x] Resolve the .env.example delivery limitation or document the approved platform-managed alternative
+- [x] Move remaining finance create/update/delete DB operations into server/db.ts helpers
+- [x] Add visible auth, dashboard, budgets, and categories loading states
+- [x] Add Vitest coverage for transaction, category, budget, and dashboard API flows
+- [x] Replace the dollar display with the selected currency symbol across finance views and charts
+- [x] Add a persistent user currency preference with selectable international currency codes
+- [x] Apply locale-aware money formatting to dashboard cards, charts, budgets, and transactions
+- [x] Verify multi-currency selection and formatting behavior
+- [x] Replace prompt-based account changes with a dedicated editable profile form
+- [x] Validate and persist profile name, email, and currency updates through the protected account endpoint
+- [x] Test the editable profile workflow
+- [x] Add secure user-owned profile picture storage and account metadata
+- [x] Add profile picture upload and replacement controls in Profile settings
+- [x] Show the uploaded profile picture in dashboard navigation and account areas
+- [x] Test profile picture upload validation and display behavior
+- [x] Add testable image payload validation for profile picture uploads
+- [x] Verify avatar display behavior in the logged-in dashboard and profile view
+- [x] Resolve the development authentication request timeout and complete live avatar upload verification
+- [x] Replace prompt-based budget creation with a validated Create Budget modal
+- [x] Provide category, amount, and month selection in the budget form
+- [x] Test the in-app budget creation workflow
+- [x] Verify that the Create Budget modal saves a budget and refreshes the Budgets view
+- [x] Audit desktop and mobile UI/UX for navigation, visual hierarchy, responsive layout, and feedback states
+- [x] Refine high-impact usability issues across dashboard, forms, modals, and empty states
+- [x] Verify the refined UI/UX at desktop and mobile viewports
+- [x] Document the project’s programming languages and technology stack in the README

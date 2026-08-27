@@ -1,0 +1,14 @@
+.budget-modal { max-width: 500px; }
+.budget-modal .modal-head { margin-bottom: 18px; }
+.budget-modal .modal-head .muted { margin: 7px 0 0; font-size: 12px; }
+.budget-form-note { display: flex; align-items: flex-start; gap: 9px; margin: 6px 0 16px; padding: 11px 12px; border-radius: 9px; background: #f5f3ff; color: #6b60bd; font-size: 11px; line-height: 1.45; }
+.budget-form-note svg { flex: none; margin-top: 1px; }
+.budget-line { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 0; border-bottom: 1px solid #f0eef5; }
+.budget-line:last-child { border-bottom: 0; }
+.budget-line span { display: flex; align-items: center; gap: 7px; color: #565361; font-weight: 700; font-size: 12px; }
+.budget-line small { display: block; margin-top: 5px; color: #9996a5; font-size: 10px; }
+.budget-progress { min-width: 105px; text-align: right; }
+.budget-progress strong { display: block; margin-bottom: 5px; color: #7064d8; font-size: 11px; }
+.budget-progress i { display: block; overflow: hidden; height: 5px; border-radius: 999px; background: #eceafd; }
+.budget-progress b { display: block; height: 100%; border-radius: inherit; background: #7c6bf2; }
+@media (max-width: 640px) { .budget-line { align-items: flex-start; flex-direction: column; gap: 10px; }.budget-progress { width: 100%; text-align: left; }.budget-progress i { width: 100%; }.modal-backdrop { width: 100vw; left: 0; right: auto; }.budget-modal { width: 100%; max-width: none; min-height: 0; }.budget-modal .modal-head { margin-bottom: 16px; }.budget-modal label { margin-bottom: 14px; }.budget-modal .primary-btn { position: sticky; bottom: -1px; margin-bottom: -1px; } }

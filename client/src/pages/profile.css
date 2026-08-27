@@ -1,0 +1,12 @@
+.avatar-image { object-fit: cover; display: block; }
+.profile-preview { width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: 0 0 76px; background: #d9d5ff; color: #6156c3; font-weight: 800; object-fit: cover; }
+.avatar-upload { display: flex; align-items: center; gap: 16px; padding: 16px 0 22px; margin-bottom: 20px; border-bottom: 1px solid #efedf4; }
+.avatar-upload strong { display: block; font-size: 13px; margin-bottom: 4px; }
+.avatar-upload p { margin: 0 0 10px; }
+.upload-button { display: inline-flex; align-items: center; gap: 7px; width: fit-content; margin: 0; padding: 9px 11px; border: 1px solid #eceaf3; border-radius: 8px; color: #6555d6; background: #f7f6ff; cursor: pointer; font-size: 12px; font-weight: 700; }
+.upload-button input { display: none; }
+.profile-form { max-width: 560px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.profile-form label:nth-child(3), .profile-form .primary-btn { grid-column: span 2; }
+.profile-form .primary-btn { width: max-content; }
+@media (max-width: 640px) { .profile-form { grid-template-columns: 1fr; }.profile-form label:nth-child(3), .profile-form .primary-btn { grid-column: span 1; } }
+

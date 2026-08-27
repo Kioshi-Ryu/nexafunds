@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1787819054116,
+      "tag": "0000_rare_raza",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787819201645,
+      "tag": "0001_nappy_bloodscream",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787819530945,
+      "tag": "0002_busy_wrecker",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787820242865,
+      "tag": "0003_lumpy_roulette",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1787821278901,
+      "tag": "0004_spooky_thaddeus_ross",
+      "breakpoints": true
+    }
+  ]
+}

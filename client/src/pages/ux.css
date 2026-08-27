@@ -1,0 +1,23 @@
+html { scroll-behavior: smooth; }
+button, input, select { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, input:focus-visible, select:focus-visible, .upload-button:focus-within { outline: 3px solid rgba(124, 107, 242, .28); outline-offset: 2px; }
+button:disabled { cursor: not-allowed; opacity: .58; box-shadow: none; }
+.primary-btn:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 11px 25px rgba(117, 100, 236, .25); }
+.primary-btn:not(:disabled):active { transform: translateY(0) scale(.98); }
+.auth-panel { background: radial-gradient(circle at 80% 15%, rgba(124,107,242,.055), transparent 28%), #fff; }
+.auth-card { animation: ux-enter .35s cubic-bezier(.23,1,.32,1) both; }
+.auth-card label, .profile-form label, .modal label { letter-spacing: .01em; }
+.auth-card input, .profile-form input, .profile-form select, .modal input, .modal select { min-height: 47px; }
+.auth-card input:hover, .profile-form input:hover, .profile-form select:hover, .modal input:hover, .modal select:hover { border-color: #cbc6df; }
+.sidebar nav button { min-height: 42px; }
+.workspace, .stat-card, .panel { transition: transform .2s cubic-bezier(.23,1,.32,1), box-shadow .2s cubic-bezier(.23,1,.32,1), border-color .2s; }
+.stat-card:hover, .panel:hover { border-color: #e5e1f6; box-shadow: 0 10px 24px rgba(48,42,89,.055); }
+.modal-backdrop { animation: ux-fade .2s ease-out both; }
+.modal { animation: ux-enter .24s cubic-bezier(.23,1,.32,1) both; }
+.table-row { transition: background .16s ease-out; }
+.table-row:not(.table-head):hover { background: #fbfaff; }
+@keyframes ux-enter { from { opacity: 0; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes ux-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 640px) { .auth-panel { padding: 25px; justify-content: flex-start; padding-top: max(80px, 12vh); }.auth-card { width: 100%; }.auth-card label { margin-bottom: 20px; }.switch-copy { margin-top: 22px; }.primary-btn { min-height: 48px; }.hero-row .primary-btn.compact { white-space: nowrap; }.modal-backdrop { align-items: flex-end; padding: 0; }.modal { width: 100%; max-height: 92vh; overflow-y: auto; border-radius: 18px 18px 0 0; padding: 22px 18px calc(22px + env(safe-area-inset-bottom)); }.budget-form-note { margin-bottom: 14px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
