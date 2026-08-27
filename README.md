@@ -52,7 +52,7 @@ The Drizzle schema contains `users`, `transactions`, `budgets`, and `categories`
 2. Copy `.env.example` to `.env` and set `DATABASE_URL` to a reachable MySQL/TiDB database. Keep `JWT_SECRET` long and private. The hosted WebDev environment injects its database and platform values automatically.
 3. Install dependencies with `pnpm install`.
 4. Generate or apply the schema with `pnpm drizzle-kit generate` followed by the migration workflow used by your database environment. The checked-in migration is under `drizzle/0001_nappy_bloodscream.sql`.
-5. Start the combined client/server development process with `pnpm dev`.
+5. Start the combined client/server development process with `pnpm dev`. The command uses `cross-env`, so it works in Windows PowerShell, macOS, and Linux.
 6. Open the URL printed by the dev server. Register an account, then add transactions from the dashboard.
 
 Useful commands are shown below.
@@ -64,6 +64,12 @@ pnpm test
 pnpm build
 pnpm dev
 ```
+
+### Windows troubleshooting
+
+If account creation shows **“Failed to fetch”**, first confirm that the combined Vite and Express process is still running in the same terminal. Run `pnpm install` after pulling the latest code, add a valid local `.env` file, then run `pnpm dev`. Wait for the `Server running on http://localhost:...` message before opening the address in your browser. The project now uses `cross-env`, so the same `pnpm dev` command works in Windows PowerShell without setting `NODE_ENV` manually.
+
+If the terminal shows a database configuration error, confirm that `.env` contains a reachable MySQL/TiDB-compatible `DATABASE_URL` and a private `JWT_SECRET`. Restart `pnpm dev` after updating environment variables.
 
 ## Project layout
 

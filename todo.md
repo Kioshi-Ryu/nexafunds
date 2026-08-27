@@ -55,3 +55,5 @@
 - [x] Refine high-impact usability issues across dashboard, forms, modals, and empty states
 - [x] Verify the refined UI/UX at desktop and mobile viewports
 - [x] Document the project’s programming languages and technology stack in the README
+- [x] Synchronize the verified Budget Tracker project with the connected GitHub repository
+- [x] Diagnose the Windows local “Failed to fetch” registration error and document a startup fix
